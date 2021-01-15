@@ -1,0 +1,185 @@
+input[type='submit'],
+button,
+input::-webkit-file-upload-button {
+  background: none;
+  border: 1.5px solid #ffffff;
+  color: #ffffff;
+  outline: none;
+  font: inherit;
+  width: auto;
+  padding: 5px 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.1s;
+  background: #111133;
+
+  &:hover {
+    background: #4444ff;
+  }
+
+  .prompt {
+    background: #666622;
+  }
+
+  .red {
+    background: #662222;
+  }
+
+  .green {
+    background: #226622;
+  }
+}
+
+button,
+input::-webkit-file-upload-button {
+  margin: 10px;
+}
+
+.info {
+  background: #4444ff;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ffffff;
+}
+
+#notAvailable {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #ffffff;
+  text-align: center;
+}
+
+#alertBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s;
+
+  &.hidden {
+    z-index: -1;
+    backdrop-filter: blur(0);
+  }
+
+  &.red {
+    background: #66222288;
+  }
+
+  &.green {
+    background: #22662288;
+  }
+}
+
+#alert {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%) scale(1);
+  border: 2px solid #ffffff;
+  transition: all 0.25s;
+  width: 50vw;
+  background: #111133;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 75vh;
+
+  #alertDiv, #historyDiv {
+    padding: 20px;
+  }
+
+  &.hidden {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  &.red {
+    background: #662222;
+  }
+
+  &.green {
+    background: #226622;
+  }
+
+  #historyDiv {
+    position: relative;
+    text-align: right;
+
+    #closeHistory {
+      margin: 0;
+      position: sticky;
+      right: 0;
+      top: 20px;
+      background: #4444ff;
+      box-shadow: 0 0 2px 2px #4444ff;
+      transition: 0.25s all;
+
+      &:hover {
+        box-shadow: 0 0 10px 2px #4444ff;
+      }
+    }
+
+    #loadingPrompt {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+#historyDiv {
+  text-align: center;
+  padding: 50px;
+}
+
+#alertBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s;
+
+  &.hidden {
+    z-index: -1;
+    backdrop-filter: blur(0);
+  }
+
+  &.red {
+    background: #66222288;
+  }
+
+  &.green {
+    background: #22662288;
+  }
+}
+
+#alert {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%) scale(1);
+  border: 2px solid #ffffff;
+  transition: all 0.25s;
+  width: 50vw;
+  background: #111133;
+  z-index: 1000;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 75vh;
+
+  &.hidden {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  &.red {
+    background: #662222;
+  }
+
+  &.green {
+    background: #226622;
+  }
+}

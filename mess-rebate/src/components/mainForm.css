@@ -1,0 +1,237 @@
+form {
+  position: relative;
+  text-align: center;
+  margin: 20px auto 0 auto;
+  padding: 50px;
+  width: 80%;
+}
+
+::selection {
+  background: #4444ff;
+}
+
+.inputField {
+  margin: 10px auto;
+  width: 80%;
+}
+
+label {
+  position: absolute;
+  margin: 7px;
+  pointer-events: none;
+  transition: all 0.1s;
+}
+label.active {
+  transform: translate(calc(-100% - 20px));
+}
+
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=date],
+input[type=submit],
+button,
+input::-webkit-file-upload-button {
+  background: none;
+  padding: 5px;
+  border: 1.5px solid #ffffff;
+  width: 100%;
+  outline: none;
+  font: inherit;
+  color: inherit;
+}
+
+textarea {
+  background: none;
+  padding: 5px;
+  border: 1.5px solid #ffffff;
+  width: 100%;
+  outline: none;
+  font: inherit;
+  color: inherit;
+}
+
+input[type=submit],
+button,
+input::-webkit-file-upload-button {
+  width: auto;
+  padding: 5px 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.1s;
+  background: #111133;
+}
+input[type=submit]:hover,
+button:hover,
+input::-webkit-file-upload-button:hover {
+  background: #4444ff;
+}
+input[type=submit] .prompt,
+button .prompt,
+input::-webkit-file-upload-button .prompt {
+  background: #666622;
+}
+input[type=submit] .red,
+button .red,
+input::-webkit-file-upload-button .red {
+  background: #662222;
+}
+input[type=submit] .green,
+button .green,
+input::-webkit-file-upload-button .green {
+  background: #226622;
+}
+
+button,
+input::-webkit-file-upload-button {
+  margin: 10px;
+}
+
+#rollNoInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#rollNoInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.boxField {
+  border: 1.5px solid #ffffff;
+  padding: 5px 0;
+}
+.boxField label {
+  position: relative;
+  display: block;
+  text-align: left;
+  margin: 0 20px;
+  padding: 15px;
+}
+.boxField input {
+  width: auto;
+  margin: 5px 10px;
+}
+.boxField input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+.boxField input::-webkit-datetime-edit-day-field, .boxField input::-webkit-datetime-edit-month-field, .boxField input::-webkit-datetime-edit-year-field {
+  padding: 5px;
+}
+.boxField input::-webkit-datetime-edit-day-field:focus, .boxField input::-webkit-datetime-edit-month-field:focus, .boxField input::-webkit-datetime-edit-year-field:focus {
+  background-color: #4444ff;
+  color: #ffffff;
+}
+.boxField > div {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+textarea {
+  resize: none;
+}
+
+.info {
+  background: #4444ff;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ffffff;
+}
+
+#fileInputField label {
+  margin: 7px;
+  padding: 0;
+  pointer-events: auto;
+}
+#fileInputField label#labelForFileInput button {
+  display: block;
+  width: calc(100% - 20px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#fileInputField label#labelForFileInput #fileInputFilename {
+  transform: translateY(25%);
+}
+#fileInputField input {
+  display: none;
+}
+
+#notAvailable {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #ffffff;
+  text-align: center;
+}
+
+#alertBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s;
+}
+#alertBg.hidden {
+  z-index: -1;
+  backdrop-filter: blur(0);
+}
+#alertBg.red {
+  background: #66222288;
+}
+#alertBg.green {
+  background: #22662288;
+}
+
+#alert {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%) scale(1);
+  border: 2px solid #ffffff;
+  transition: all 0.25s;
+  width: 50vw;
+  background: #111133;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 75vh;
+}
+#alert #alertDiv, #alert #historyDiv {
+  padding: 20px;
+}
+#alert.hidden {
+  transform: translate(-50%, -50%) scale(0);
+}
+#alert.red {
+  background: #662222;
+}
+#alert.green {
+  background: #226622;
+}
+#alert #historyDiv {
+  position: relative;
+  text-align: right;
+}
+#alert #historyDiv #closeHistory {
+  margin: 0;
+  position: sticky;
+  right: 0;
+  top: 20px;
+  background: #4444ff;
+  box-shadow: 0 0 2px 2px #4444ff;
+  transition: 0.25s all;
+}
+#alert #historyDiv #closeHistory:hover {
+  box-shadow: 0 0 10px 2px #4444ff;
+}
+#alert #historyDiv #loadingPrompt {
+  text-align: center;
+  width: 100%;
+}
+
+button.disabled, button.disabled:hover {
+  opacity: 0.5;
+  background: transparent;
+  cursor: default;
+}
+
+/*# sourceMappingURL=mainForm.css.map */

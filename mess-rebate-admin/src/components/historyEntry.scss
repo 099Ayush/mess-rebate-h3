@@ -1,0 +1,68 @@
+.entry {
+  display: grid;
+  grid-template-columns: 70% 20%;
+  grid-column-gap: 10%;
+  border: solid #ffffff;
+  border-width: 1px 2px;
+  padding: 15px 20px;
+  background: #111133;
+
+  &.green {
+    background: #113311;
+  }
+
+  &.red {
+    background: #331111;
+  }
+
+  .from, .to {
+    text-align: left;
+    padding: 0;
+    margin: 5px 0;
+    font-weight: bold;
+  }
+
+  .reason {
+    padding: 20px;
+    border-left: 1px solid #ffffff;
+    margin: 0 0 0 20px;
+    text-align: left;
+  }
+
+  table, tr, td {
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  button:not(.download) {
+    width: 100%;
+    margin: 0;
+  }
+
+  button.download {
+    margin: 0;
+    width: 100px;
+  }
+
+  .userInfo {
+    background-color: #0048;
+    padding: 5px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+  }
+
+  &.red .userInfo {
+    background: #4008;
+  }
+
+  &.green .userInfo {
+    background: #0408;
+  }
+}
+
+a {
+  color: #ffffff;
+  text-decoration: underline dotted;
+}

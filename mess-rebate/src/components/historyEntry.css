@@ -1,0 +1,39 @@
+.entry {
+  display: grid;
+  grid-template-columns: 70% 20%;
+  grid-column-gap: 10%;
+  border: solid #ffffff;
+  border-width: 1px 2px;
+  padding: 15px 20px;
+  background: #111133;
+}
+.entry.green {
+  background: #226622;
+}
+.entry.red {
+  background: #662222;
+}
+.entry .from, .entry .to {
+  text-align: left;
+  padding: 0;
+  margin: 5px 0;
+  font-weight: bold;
+}
+.entry .reason {
+  padding: 20px;
+  border-left: 1px solid #ffffff;
+  margin: 0 0 0 20px;
+  text-align: left;
+}
+.entry table, .entry tr, .entry td {
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.entry button {
+  width: 100%;
+  margin: 0;
+}
+
+/*# sourceMappingURL=historyEntry.css.map */
